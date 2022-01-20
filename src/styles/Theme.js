@@ -3,9 +3,10 @@
 export const themeDefault = {
    name: "default",
    palette: {
-       primaryColor: "#262940",
-       secondaryColor: "#212F45",
-       textPrimaryColor: "#8089bf",
+       primaryColorDark: "#162032",
+       primaryColor: "#224573",
+       primaryColorLight: "#7099db",
+       primaryColorLightest: "#d3ddf4",
        borderColor: "" //Undecided 
    },
    font: {

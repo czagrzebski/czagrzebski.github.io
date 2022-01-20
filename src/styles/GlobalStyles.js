@@ -13,6 +13,6 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
         min-height: 100%;
         overflow-x: hidden; 
-        background-color: ${({theme}) => theme.palette.primaryColor};
+        background-color: ${({theme}) => theme.palette.primaryColorDark};
     }
 `
