@@ -9,7 +9,6 @@ function App() {
     <ThemeProvider theme={themeDefault} >
       <GlobalStyle />
       <Nav />
-      <h2 style={{color: themeDefault.palette.primaryColorLightest, textAlign: "center"}}>Personal Portfolio</h2>
     </ThemeProvider>
   );
 }

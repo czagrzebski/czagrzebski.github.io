@@ -5,8 +5,9 @@ export const themeDefault = {
    palette: {
        primaryColorDark: "#162032",
        primaryColor: "#224573",
-       primaryColorLight: "#7099db",
+       primaryColorLight: "#b3c6ec",
        primaryColorLightest: "#d3ddf4",
+       secondaryColorPrimary: "#96d8b6",
        borderColor: "" //Undecided 
    },
    font: {
