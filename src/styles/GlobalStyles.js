@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         width: 100%;
         scroll-behavior: smooth;
+        margin: 0%;
     }
 
     body {

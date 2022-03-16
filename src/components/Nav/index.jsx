@@ -5,17 +5,24 @@ import { FaGithub } from "react-icons/fa";
 
 const StyledNav = styled.nav`
   display: flex;
-  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 70px;
+  height: 80px;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  padding-right: 50px;
+  padding-left: 50px;
+
+  .logo {
+    color: ${({ theme }) => theme.palette.primaryColorLightest};
+  }
 `;
 
 const StyledLinks = styled.div`
   display: flex;
-  justify-content: center;
+  margin-left: auto;
 
   /* Hide on mobile view */
   @media (max-width: 768px) {
@@ -24,11 +31,9 @@ const StyledLinks = styled.div`
 
   ul {
     display: flex;
-    justify-content: center;
     gap: 10px;
     list-style-type: none;
     margin: 10px 0;
-    padding: 0;
 
     a {
       display: inline-block;
@@ -39,35 +44,42 @@ const StyledLinks = styled.div`
 
       &::after {
         display: block;
-        content: '';
-        border-bottom: solid 3px ${({ theme }) => theme.palette.primaryColorLightest};
+        content: "";
+        border-bottom: solid 3px
+          ${({ theme }) => theme.palette.primaryColorLightest};
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
         transform-origin: 0% 50%;
       }
 
       &:hover::after {
-        transform: scaleX(1)
+        transform: scaleX(1);
       }
 
       &:hover::before {
         width: 100%;
       }
     }
-
   }
 `;
 
 const Nav = () => {
   return (
     <StyledNav>
+      <div className="logo">
+        <h2>Creed Zagrzebski</h2>
+      </div>
+
       <StyledLinks>
         {/* Dynamically Generate Links */}
         <ul>
-          {navLinks &&
-            navLinks.map(({ name, url }) => {
-              return <li><a href={url}>{name}</a></li>;
-            })}
+          {navLinks?.map(({ name, url }) => {
+            return (
+              <li>
+                <a href={url}>{name}</a>
+              </li>
+            );
+          })}
         </ul>
       </StyledLinks>
     </StyledNav>
