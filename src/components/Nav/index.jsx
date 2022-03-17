@@ -1,29 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import { navLinks } from "config";
-import { FaGithub } from "react-icons/fa";
 
 const StyledNav = styled.nav`
   display: flex;
   align-items: center;
-  position: fixed;
-  top: 0;
+  justify-content: space-between;
+  position: relative;
+
   width: 100%;
   height: 80px;
   flex-wrap: nowrap;
   box-sizing: border-box;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 75px;
+  padding-left: 75px;
 
   .logo {
     color: ${({ theme }) => theme.palette.primaryColorLightest};
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 `;
 
 const StyledLinks = styled.div`
   display: flex;
-  margin-left: auto;
-
+ 
   /* Hide on mobile view */
   @media (max-width: 768px) {
     display: none;
@@ -34,6 +38,7 @@ const StyledLinks = styled.div`
     gap: 10px;
     list-style-type: none;
     margin: 10px 0;
+    align-items: center;
 
     a {
       display: inline-block;
@@ -63,11 +68,12 @@ const StyledLinks = styled.div`
   }
 `;
 
+
 const Nav = () => {
   return (
     <StyledNav>
       <div className="logo">
-        <h2>Creed Zagrzebski</h2>
+        <a href="/#home"> <h2>{`{ CZ }`}</h2> </a>
       </div>
 
       <StyledLinks>
