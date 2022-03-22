@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaGraduationCap, FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
+import { HiLocationMarker } from "react-icons/hi";
 import { socialLinks } from "config";
 
 const Container = styled.section`
@@ -9,6 +10,8 @@ const Container = styled.section`
     justify-content: center;
     gap: 20px;
     margin-top: 100px;
+
+    align-items: center;
 
     color: ${({ theme }) => theme.palette.primaryColorLightest}; 
     
@@ -20,7 +23,7 @@ const Container = styled.section`
     }
 
     p {
-        font-size: ${({ theme }) => theme.font.lg};
+        font-size: ${({ theme }) => theme.font.xl};
     }
 
 `;
@@ -35,12 +38,13 @@ const SocialButtons = styled.div`
         text-decoration: none;
         color: ${({ theme }) => theme.palette.primaryColorLightest};
         padding: 8px 16px;
-        transition-duration: 0.8s;
+        transition-duration: 0.6s;
 
         &:hover {
             color: ${({ theme }) => theme.palette.secondaryColorPrimary};
             border: 2px solid ${({ theme }) => theme.palette.secondaryColorPrimary};
             background-color: ${({ theme }) => theme.palette.hoverSecondaryColor};
+            cursor: pointer;
           
         }
         
@@ -66,12 +70,15 @@ const Hero = () => {
                 <h1> Hi, I'm Creed Zagrzebski. </h1>
                 <p>I am a passionate student and developer interested in Software Engineering and Computer Science. I enjoy learning new technologies and applying them to create real-world applications.</p>
                 <p>
-                    <FaGraduationCap /> Computer Student Student at the University of Wisconsin-La Crosse
+                    < HiLocationMarker  /> Wisconsin, USA
+                </p>
+                <p>
+                    <FaGraduationCap /> Computer Science Student at the University of Wisconsin-La Crosse
                 </p>
                 <SocialButtons>
-                    <a href={socialLinks.github} target="_blank"><button><FaGithub/> Github</button></a>
-                    <a href={socialLinks.linkedin} target="_blank"><button><FaLinkedin/> LinkedIn</button></a>
-                    <a href={socialLinks.resume} target="_blank"><button><FaFileAlt/> Resume</button></a>
+                    <a href={socialLinks.github} target="_blank" rel="noreferrer"><button><FaGithub/> Github</button></a>
+                    <a href={socialLinks.linkedin} target="_blank" rel="noreferrer"><button><FaLinkedin/> LinkedIn</button></a>
+                    <a href={socialLinks.resume} target="_blank" rel="noreferrer"><button><FaFileAlt/> Resume</button></a>
                 </SocialButtons>
             </div>
             <PlaceHolder>

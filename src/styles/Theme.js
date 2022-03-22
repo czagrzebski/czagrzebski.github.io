@@ -19,6 +19,6 @@ export const themeDefault = {
        lg: "18px",
        xl: "20px",
        xxl: "22px",
-       heading: "32px"
+       heading: "42px"
    }
 }
