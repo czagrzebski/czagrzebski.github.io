@@ -9,22 +9,28 @@ const Container = styled.section`
     box-sizing: border-box;
     justify-content: center;
     gap: 20px;
-    margin-top: 100px;
-
+    width: 100%;
+    height: 95vh;
 
     align-items: center;
+    
+    padding-bottom: 0;
+   
 
     color: ${({ theme }) => theme.palette.primaryColorLightest}; 
     
-    padding-left: 400px;
-    padding-right: 300px;
 
     h1 {
         font-size: ${({ theme }) => theme.font.heading};
+        text-align: center;
+        padding: 0;
+        margin: 0;
     }
 
     p {
-        font-size: ${({ theme }) => theme.font.xl};
+      
+        text-align: center;
+        font-size: ${({ theme }) => theme.font.xxl};
     }
 
 `;
@@ -32,6 +38,12 @@ const Container = styled.section`
 const SocialButtons = styled.div`
     display: flex;
     gap: 20px;
+
+   
+
+    width: 100%;
+
+    justify-content: center ;
   
     button {
         background-color: transparent;
@@ -41,6 +53,7 @@ const SocialButtons = styled.div`
         padding: 10px 18px;
         transition-duration: 0.5s;
         border-radius: 10px;
+        font-size: ${({ theme }) => theme.font.xl};
 
         &:hover {
             color: ${({ theme }) => theme.palette.secondaryColorPrimary};
@@ -70,22 +83,13 @@ const Hero = () => {
         <Container>
             <div>
                 <h1> Hi, I'm Creed Zagrzebski. </h1>
-                <p>I am a passionate student and developer interested in Software Engineering and Computer Science. I enjoy learning new technologies and applying them to create real-world applications.</p>
-                <p>
-                    < HiLocationMarker  /> Wisconsin, USA
-                </p>
-                <p>
-                    <FaGraduationCap /> Computer Science Student at the University of Wisconsin-La Crosse
-                </p>
+                <p> Site under construction </p>
                 <SocialButtons>
                     <a href={socialLinks.github} target="_blank" rel="noreferrer"><button><FaGithub/> Github</button></a>
                     <a href={socialLinks.linkedin} target="_blank" rel="noreferrer"><button><FaLinkedin/> LinkedIn</button></a>
                     <a href={socialLinks.resume} target="_blank" rel="noreferrer"><button><FaFileAlt/> Resume</button></a>
                 </SocialButtons>
             </div>
-            <PlaceHolder>
-                Placeholder 
-            </PlaceHolder>
         </Container>
     )
 }

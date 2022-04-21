@@ -4,7 +4,7 @@ export const themeDefault = {
    name: "default",
    palette: {
        primaryColorDark: "#162032",
-       primaryColor: "#224573",
+       primaryColor: "#1b3b66",
        primaryColorLight: "#b3c6ec",
        primaryColorLightest: "#d3ddf4",
        secondaryColorPrimary: "#96d8b6",
@@ -18,7 +18,7 @@ export const themeDefault = {
        md: "16px",
        lg: "18px",
        xl: "20px",
-       xxl: "22px",
-       heading: "42px"
+       xxl: "30px",
+       heading: "50px"
    }
 }
