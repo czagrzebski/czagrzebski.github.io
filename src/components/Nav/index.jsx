@@ -14,6 +14,7 @@ const StyledNav = styled.nav`
   box-sizing: border-box;
   padding-right: 75px;
   padding-left: 75px;
+  font-size: ${({ theme }) => theme.font.lg} ;
 
   .logo {
     color: ${({ theme }) => theme.palette.primaryColorLightest};
@@ -82,7 +83,7 @@ const Nav = () => {
           {navLinks?.map(({ name, url }) => {
             return (
               <li>
-                <a href={url}>{name}</a>
+                <a key={url} href={url}>{name}</a>
               </li>
             );
           })}

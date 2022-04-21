@@ -11,6 +11,7 @@ const Container = styled.section`
     gap: 20px;
     margin-top: 100px;
 
+
     align-items: center;
 
     color: ${({ theme }) => theme.palette.primaryColorLightest}; 
@@ -37,8 +38,9 @@ const SocialButtons = styled.div`
         border: 2px solid ${({ theme }) => theme.palette.primaryColorLightest};
         text-decoration: none;
         color: ${({ theme }) => theme.palette.primaryColorLightest};
-        padding: 8px 16px;
-        transition-duration: 0.6s;
+        padding: 10px 18px;
+        transition-duration: 0.5s;
+        border-radius: 10px;
 
         &:hover {
             color: ${({ theme }) => theme.palette.secondaryColorPrimary};
