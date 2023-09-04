@@ -8,10 +8,13 @@ const Container = styled.section`
     display: flex;
     box-sizing: border-box;
     justify-content: center;
-    gap: 20px;
-    margin-top: 100px;
-
     align-items: center;
+    min-height: 100%;
+    flex: 1;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 
     color: ${({ theme }) => theme.palette.primaryColorLightest}; 
     
@@ -25,6 +28,8 @@ const Container = styled.section`
     p {
         font-size: ${({ theme }) => theme.font.xl};
     }
+
+    overflow: auto;
 
 `;
 
@@ -51,24 +56,37 @@ const SocialButtons = styled.div`
     }
 `;
 
-const PlaceHolder = styled.div`
+const Text  = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    width: 100%;
-    background-color: lightskyblue;
-    color: black;
-    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    height: 100%;
+    gap: 15px;
+
+    p {
+        margin: 0;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+
+`;
+
+
+const PlaceHolder = styled.div`;
+
 `;
 
 
 const Hero = () => {
     return (
         <Container>
-            <div>
+            <Text>
                 <h1> Hi, I'm Creed Zagrzebski. </h1>
-                <p>I am a passionate student and developer interested in Software Engineering and Computer Science. I enjoy learning new technologies and applying them to create real-world applications.</p>
+                <p>I am a passionate student and developer interested in Software Engineering, Computer Science, and Robotics. I enjoy learning new technologies and applying them to create real-world applications.</p>
                 <p>
                     < HiLocationMarker  /> Wisconsin, USA
                 </p>
@@ -80,9 +98,9 @@ const Hero = () => {
                     <a href={socialLinks.linkedin} target="_blank" rel="noreferrer"><button><FaLinkedin/> LinkedIn</button></a>
                     <a href={socialLinks.resume} target="_blank" rel="noreferrer"><button><FaFileAlt/> Resume</button></a>
                 </SocialButtons>
-            </div>
+            </Text>
             <PlaceHolder>
-                Placeholder 
+            
             </PlaceHolder>
         </Container>
     )
