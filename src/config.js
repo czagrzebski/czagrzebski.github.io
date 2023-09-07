@@ -24,5 +24,5 @@ export const navLinks = [
 export const socialLinks = {
   "github": "https://github.com/czagrzebski",
   "linkedin": "https://www.linkedin.com/in/creed-zagrzebski-96362a1ab/",
-  "resume": ""
+  "resume": "https://docs.google.com/document/d/1seAZef0MybiyYqI0H4ovTAIKI5Tk2kzlVVOBzpBP7JM/edit"
 }

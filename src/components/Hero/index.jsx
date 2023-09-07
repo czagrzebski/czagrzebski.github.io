@@ -18,8 +18,21 @@ const Container = styled.section`
     box-sizing: border-box;
     min-height: 100vh;
     width: 100%;
-    overflow-x: hidden;
     gap: 50px;
+    overflow: hidden;
+
+    animation: fadeIn 1s ease-in-out;
+
+    @keyframes fadeIn {
+        0% { 
+            opacity: 0; 
+            transform: translateY(-20px);
+        }
+        100% { 
+            opacity: 1; 
+            transform: translateY(0);
+        }
+    }
 
     color: ${({ theme }) => theme.palette.primaryColorLightest};
 
@@ -66,6 +79,7 @@ const Introduction = styled.div`
     justify-content: flex-start;
     align-content: center;
     height: 100%;
+    overflow: hidden;
     gap: 15px;
 
     p {
@@ -83,6 +97,10 @@ const GlobeDiv = styled.div`;
     align-items: center;
     height: 400px;
     width: 400px;
+
+    @media (max-width: 800px) {
+        display: none;
+    }
 `;
 
 const Hero = () => {
@@ -91,7 +109,7 @@ const Hero = () => {
     useEffect(() => {
         const globeInstance = globeEl.current
         globeInstance.controls().autoRotate = true
-        globeInstance.controls().autoRotateSpeed = 2.5
+        globeInstance.controls().autoRotateSpeed = 2.2
 
         // disable scroll zoom
         globeInstance.controls().enableZoom = false
@@ -100,7 +118,10 @@ const Hero = () => {
         globeInstance.controls().enablePan = false
 
         // Set Initial Globe Position
-        globeInstance.pointOfView({ lat: 44.5236, lng: -89.5746, altitude: 2 }, 0)
+        globeInstance.pointOfView({ lat: 44.5236, lng: -48.5746, altitude: 2 }, 0)
+
+        // Disable Controls
+        globeInstance.controls().enabled = false
     }, [])
     return (
         <Container>
